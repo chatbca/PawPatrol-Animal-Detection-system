@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    background-image: url('bcc.jpg'); /* Replace with a URL to an animal-themed background image */
+    background-position: center;
+    
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Adds a playful font */
+    color: #000000; /* Adds a bit of color to the text */
+}
+
+video {
+    width: 0px;
+    height: 0px;
+}
+
+table {
+    width: auto;
+    margin: auto;
+    border-collapse: collapse; /* Ensures table borders collapse into a single border */
+    background-color: rgba(64, 111, 138, 0.8); /* Adds a semi-transparent white background */
+}
+
+tr,
+td {
+    border: 0px;
+    text-align: center;
+    padding: 10px; /* Adds padding for better spacing */
+    transition: transform 0.3s; /* Adds a transition for hover effects */
+}
+
+/* Animal-themed hover effects */
+tr:hover,
+td:hover {
+    transform: scale(1.1); /* Slightly enlarges the cell on hover */
+    background-color: rgba(0, 255, 157, 0.8); /* Changes background to a golden color on hover */
+}
+
+/* Adding a paw print as a background image for the cells */
+td {
+    background-image: url('https://example.com/paw-print.png'); /* Replace with a URL to a paw print image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Adding a dog animation */
+@keyframes wag-tail {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.dog-tail {
+    display: inline-block;
+    animation: wag-tail 1s infinite; /* Infinite wagging tail animation */
+}
